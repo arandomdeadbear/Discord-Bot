@@ -1,0 +1,46 @@
+{
+  "name": "discord-bot",
+  "version": "0.0.1",
+  "description": "The easiest and coolest discord.js@latest bot project with a flexible handler for everything.",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "start:bash": "bash start.sh",
+    "start:dev": "nodemon main.js"
+  },
+  "keywords": [
+    "DiscordJS",
+    "DiscordBot",
+    "DevBear"
+  ],
+  "author": "DeadBear#2010",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "chalk": "4",
+    "discord.js": "^14.9.0",
+    "dotenv": "^16.0.3",
+    "luxon": "^3.3.0",
+    "module-alias": "^2.2.2",
+    "mongoose": "^7.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "prettier": "^2.8.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arandomdeadbear/Discord-Bot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arandomdeadbear/Discord-Bot/issues"
+  },
+  "homepage": "https://github.com/arandomdeadbear/Discord-Bot#readme",
+  "_moduleAliases": {
+    "@root": ".",
+    "@bot": "bot/",
+    "@util": "utility/",
+    "@database": "database/",
+    "@functions": "bot/functions/",
+    "@schema": "database/schema/"
+  }
+}
