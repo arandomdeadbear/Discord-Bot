@@ -25,16 +25,19 @@ client = new Client({
 
 module.exports = client;
 
-client.events = new Collection();
-client.commands = new Collection();
-client.slashes = new Collection();
-client.buttons = new Collection();
 client.menus = new Collection();
+client.modals = new Collection();
+client.events = new Collection();
+client.buttons = new Collection();
+client.user_commands = new Collection();
+client.slash_commands = new Collection();
+client.prefix_commands = new Collection();
+client.message_commands = new Collection();
 
 [
     'event',
     'command',
-    'slash',
+    'application',
     'component',
     'mongo'
 ].forEach(file => {

@@ -12,7 +12,7 @@ module.exports = {
 			const [cmd, ...args] = message.content.slice(prefix.length).trim().split(/ +/g);
 			if(cmd.length === 0) return;
 	
-			const command = client.commands.get(cmd.toLowerCase()) || client.commands.find((c) => c.aliases?.includes(cmd.toLowerCase()));
+			const command = client.prefix_commands.get(cmd.toLowerCase()) || client.commands.find((c) => c.aliases?.includes(cmd.toLowerCase()));
 			if(!command) return;
 
 			const errEmbed = new EmbedBuilder()

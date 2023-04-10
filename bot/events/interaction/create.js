@@ -6,15 +6,14 @@ module.exports = {
 	once: false,
   async execute(client, interaction) {
     if (interaction.isChatInputCommand()) {
-      const command = client.slashes.get(interaction.commandName);
+      const command = client.slash_commands.get(interaction.commandName);
       if (!command) return;
       try {
         command.execute(client, interaction);
       } catch (err) {
         logger.logForError(err, 'SLASH');
       }
-    } 
-    else if (interaction.isButton()) {
+    } else if (interaction.isButton()) {
       const button = client.buttons.get(interaction.customId);
       if (!button) return;
       try {
@@ -30,9 +29,32 @@ module.exports = {
       } catch (err) {
         logger.logForError(err, 'MENU');
       }
+    } else if(interaction.isModalSubmit()) {
+      const modal = client.modals.get(interaction.customId);
+      if(!modal) return;
+      try {
+        modal.execute(client, interaction);
+      } catch (err) {
+        logger.logForError(err, 'MODAL');
+      }
+    } else if(interaction.isUserContextMenuCommand()) {
+      const command = client.user_commands.get(interaction.commandName);
+      if(!command) return;
+      try {
+        command.execute(client, interaction);
+      } catch (err) {
+        logger.logForError(err, 'USER COMMAND')
+      }
+    } else if(interaction.isMessageContextMenuCommand()) {
+      const command = client.message_commands.get(interaction.commandName);
+      if(!command) return;
+      try {
+        command.execute(client, interaction);
+      } catch (err) {
+        logger.logForError(err, 'MESSAGE CMD')
+      }
     } else {
       return;
     }
-   
   },
 };

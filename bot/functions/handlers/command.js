@@ -8,7 +8,7 @@ module.exports = (client) => {
         for(const file of commandFiles) {
             const command = require(`@bot/commands/prefix/${folder}/${file}`);
             if(command && command.name) {
-                client.commands.set(command.name, command);
+                client.prefix_commands.set(command.name, command);
             } else {
                 logger.error(`could not find command name in ${file}`, 'CLIENT');
             }
