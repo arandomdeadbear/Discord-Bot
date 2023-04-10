@@ -45,7 +45,6 @@ cd Discord-Bot
 - Run `pnpm run start:bash` or,
 - Run `npm i -g pnpm && pnpm i`
 - Wait for all the dependencies to be installed
-- Run `pnpm run start:bash` or,
 - Run `pnpm run start` to start the bot
 
 <br>
