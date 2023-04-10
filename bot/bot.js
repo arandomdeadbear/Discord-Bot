@@ -6,8 +6,16 @@ const {
 } = require('discord.js'),
 logger = require('@util/logger'),
 client = new Client({
-    intents: [Object.keys(GatewayIntentBits)], //getting every single intents
-    partials: [Object.keys(Partials)], //getting every single partials
+    intents: [Object.keys(GatewayIntentBits)],
+    partials: [
+        Partials.Message,
+        Partials.Channel,
+        Partials.User,
+        Partials.Reaction,
+        Partials.GuildMember,
+        Partials.ThreadMember,
+        Partials.GuildScheduledEvent,
+    ],
     allowedMentions: {
         parse: ['everyone', 'roles', 'users'],
         repliedUser: false,

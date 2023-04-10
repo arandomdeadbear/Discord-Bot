@@ -4,6 +4,7 @@ module.exports = {
     description: 'returns client websocket.',
     category: 'general',
     guild_only: false,
+    dm_only: false,
     dev_only: false,
     owner_only: false,
     permissions: {
