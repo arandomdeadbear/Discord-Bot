@@ -17,9 +17,7 @@
   •
   <a href="#-getting-started">Getting Started</a>
   •
-  <a href="#-features">Features</a>
-  •
-  <a href="#-contributing">Contributing</a>
+  <a href="#--features--">Features</a>
 </p>
 
 <br>
@@ -47,7 +45,6 @@ cd Discord-Bot
 - Run `pnpm run start:bash` or,
 - Run `npm i -g pnpm && pnpm i`
 - Wait for all the dependencies to be installed
-- Run `pnpm run start:bash` or,
 - Run `pnpm run start` to start the bot
 
 <br>
