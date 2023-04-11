@@ -4,3 +4,4 @@ utility/config.js
 pnpm-lock.yaml
 .env
 discloud.config
+discloud

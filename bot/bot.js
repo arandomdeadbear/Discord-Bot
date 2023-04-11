@@ -6,7 +6,17 @@ const {
 } = require('discord.js'),
 logger = require('@util/logger'),
 client = new Client({
-    intents: [Object.keys(GatewayIntentBits)],
+    intents: [
+        GatewayIntentBits.Guilds,
+        GatewayIntentBits.GuildMessages,
+        GatewayIntentBits.GuildMembers,
+        GatewayIntentBits.DirectMessages,
+        GatewayIntentBits.GuildModeration,
+        GatewayIntentBits.MessageContent,
+        GatewayIntentBits.GuildMessageReactions,
+        GatewayIntentBits.DirectMessageReactions,
+        GatewayIntentBits.GuildEmojisAndStickers,
+    ],
     partials: [
         Partials.Message,
         Partials.Channel,
