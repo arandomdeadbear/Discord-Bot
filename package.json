@@ -21,7 +21,7 @@
     "dotenv": "^16.0.3",
     "luxon": "^3.3.0",
     "module-alias": "^2.2.2",
-    "mongoose": "^7.0.3"
+    "mongoose": "^8.0.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.22",
