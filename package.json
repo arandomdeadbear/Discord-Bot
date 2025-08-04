@@ -16,7 +16,7 @@
   "author": "DeadBear#2010",
   "license": "Apache-2.0",
   "dependencies": {
-    "chalk": "4",
+    "chalk": "5",
     "discord.js": "^14.9.0",
     "dotenv": "^16.0.3",
     "luxon": "^3.3.0",
