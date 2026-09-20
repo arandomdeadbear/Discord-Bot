@@ -18,7 +18,7 @@
   "dependencies": {
     "chalk": "4",
     "discord.js": "^14.9.0",
-    "dotenv": "^16.0.3",
+    "dotenv": "^18.0.0",
     "luxon": "^3.3.0",
     "module-alias": "^2.2.2",
     "mongoose": "^7.0.3"
